@@ -1,20 +1,21 @@
 <script setup>
-import { computed, ref } from "vue";
+import { computed, ref } from 'vue'
 
 const slides = [
-  { id: 1, image: "/src/assets/seven.jpg" },
-  { id: 2, image: "/src/assets/strang.jpg" },
-  { id: 3, image: "/src/assets/sunda.jpg" },
-];
+  { id: 1, image: '/src/assets/seven.jpg' },
+  { id: 2, image: '/src/assets/strang.jpg' },
+  { id: 3, image: '/src/assets/sunda.jpg' },
+]
 
-const index = ref(0);
-const current = computed(() => slides[index.value]);
+const index = ref(0)
+const current = computed(() => slides[index.value])
 
 function prev() {
-  index.value = (index.value - 1 + slides.length) % slides.length;
+  index.value = (index.value - 1 + slides.length) % slides.length
 }
+
 function next() {
-  index.value = (index.value + 1) % slides.length;
+  index.value = (index.value + 1) % slides.length
 }
 </script>
 

@@ -1,26 +1,30 @@
 <script setup>
-import AccordianFile from "@/pages/AccordianFile.vue";
+import AccordianFile from '@/pages/AccordianFile.vue'
 </script>
 
 <template>
   <section class="about">
     <header class="head">
       <h1 class="title">About Us</h1>
-      <p class="lede">Short editorial copy + expandable sections. Keep it clean.</p>
+      <p class="lede"> We are a small company with big ideas. </p>
     </header>
 
     <div class="layout">
       <div class="accordionCol">
-        <AccordianFile title="Section 1">
-          <p>Placeholder content for your site info.</p>
+        <AccordianFile title="What We Do Best">
+          <p>We got our start in vintage lighting, building a deep understanding of craftsmanship, materials, and timeless design. That foundation gives us the experience to create and source exceptional lighting today—working with trusted partners around the world while also collaborating with local fabricators to deliver pieces that are distinctive, well-made, and built to last.</p>
         </AccordianFile>
 
-        <AccordianFile title="Section 2">
-          <p>More placeholder content.</p>
+        <AccordianFile title="Our Story">
+          <p>Our story began with a deep appreciation for vintage lighting and a bold leap of faith. Early on, we purchased thousands of original light fixtures from Ukraine and arranged for them to be shipped back, piece by piece. What started as a passion for salvaging and restoring well-made lighting quickly grew into a full-scale vintage lighting business.
+
+            Working so closely with historic fixtures gave us a rare, hands-on education in materials, construction, and timeless design. Over time, that knowledge naturally evolved into something more. Clients began asking for custom solutions—lighting inspired by the past but built for modern spaces. In response, we transitioned from restoration and resale into custom lighting manufacturing.
+
+            Today, we blend global sourcing with partnerships among skilled local fabricators to create custom lighting that honors traditional craftsmanship while meeting contemporary standards. Our roots in vintage lighting remain at the core of everything we do, informing each design with experience, intention, and respect for quality..</p>
         </AccordianFile>
 
-        <AccordianFile title="Section 3">
-          <p>More placeholder content.</p>
+        <AccordianFile title="Our Staff">
+          <p>With a small, skilled staff, we take a hands-on approach to every project. Our experience allows us to work efficiently, collaborate closely, and maintain a high level of craftsmanship from start to finish..</p>
         </AccordianFile>
       </div>
 
@@ -38,7 +42,6 @@ import AccordianFile from "@/pages/AccordianFile.vue";
 }
 
 .head {
-
   padding-top: 18px;
 }
 
@@ -79,4 +82,3 @@ import AccordianFile from "@/pages/AccordianFile.vue";
   display: block;
 }
 </style>
-

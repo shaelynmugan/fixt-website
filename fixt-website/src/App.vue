@@ -1,13 +1,13 @@
 <script setup>
-import LogoIcon from "@/assets/logo.svg?component";
-import InstagramIcon from "@/assets/instagram.svg?component";
-import FacebookIcon from "@/assets/facebook.svg?component";
+import LogoIcon from '@/assets/logo.svg?component'
+import InstagramIcon from '@/assets/instagram.svg?component'
+import FacebookIcon from '@/assets/facebook.svg?component'
 
 /**
  * Paste your real links here:
  */
-const INSTAGRAM_URL = "https://www.instagram.com/fixtelectric/?hl=en";
-const FACEBOOK_URL = "https://www.facebook.com/Fixtelectric/";
+const INSTAGRAM_URL = 'https://www.instagram.com/fixtelectric/?hl=en'
+const FACEBOOK_URL = 'https://www.facebook.com/Fixtelectric/'
 </script>
 
 <template>
@@ -79,7 +79,7 @@ const FACEBOOK_URL = "https://www.facebook.com/Fixtelectric/";
   --gutter: clamp(16px, 4vw, 40px);
   --radius: 14px;
 
-  --font-sans: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: system-ui, -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 html,

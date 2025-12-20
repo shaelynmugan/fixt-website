@@ -1,18 +1,18 @@
 <script setup>
-import { reactive, ref } from "vue";
+import { reactive, ref } from 'vue'
 
 const form = reactive({
-  name: "",
-  projectName: "",
-  projectType: "",
-  details: "",
-});
+  name: '',
+  projectName: '',
+  projectType: '',
+  details: '',
+})
 
-const submitted = ref(false);
+const submitted = ref(false)
 
 function submit() {
-  submitted.value = true;
-  console.log("FORM (placeholder):", form);
+  submitted.value = true
+  console.log('FORM (placeholder):', form)
 }
 </script>
 
@@ -157,6 +157,4 @@ function submit() {
   color: var(--muted);
   font-size: 14px;
 }
-
-
 </style>

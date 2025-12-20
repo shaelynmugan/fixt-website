@@ -1,14 +1,12 @@
 <script setup>
-import HomeCarousel from "@/pages/HomeCarousel.vue";
+import HomeCarousel from '@/pages/HomeCarousel.vue'
 </script>
 
 <template>
   <section class="home">
     <header class="hero">
-      <h1 class="title">Fixt Electric</h1>
-      <p class="lede">
-        A clean, editorial feel inspired by museum sites—simple, readable, and image-forward.
-      </p>
+      <h1 class="title">Fixt Custom Lighting</h1>
+      <p class="lede">We specialize in custom lighting solutions.</p>
     </header>
 
     <section class="panel">
@@ -24,7 +22,6 @@ import HomeCarousel from "@/pages/HomeCarousel.vue";
 }
 
 .hero {
-
   padding-top: 18px;
 }
 

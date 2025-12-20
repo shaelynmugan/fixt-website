@@ -8,8 +8,8 @@
     </header>
 
     <div class="card">
-      <p><strong>Email:</strong> placeholder@example.com</p>
-      <p><strong>Phone:</strong> (000) 000-0000</p>
+      <p><strong>Email:</strong> sales@fixtelectric.com</p>
+      <p><strong>Phone:</strong> 763-954-1943</p>
     </div>
   </section>
 </template>
@@ -21,7 +21,6 @@
 }
 
 .head {
-
   padding-top: 18px;
 }
 
