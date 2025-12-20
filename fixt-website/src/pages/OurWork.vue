@@ -1,4 +1,5 @@
 <script setup>
+
 const projects = [
   {
     id: 'p1',
@@ -6,6 +7,9 @@ const projects = [
     desc: 'Custom fixtures designed and manufactured for a casino renovation project.',
     image: '/src/assets/grandisland.jpg',
     location: 'Grand Island, NE',
+    projectType: 'Casino',
+    projectYear:'2025',
+    fixtureType: 'chandelier,pendant,installation'
   },
   {
     id: 'p2',
@@ -13,6 +17,10 @@ const projects = [
     desc: 'Custom fixtures designed and fabricated for office space.',
     image: '/src/assets/meet-minneapolis.jpeg',
     location: 'Minneapolis, MN',
+    projectType: 'Office',
+    projectYear:'2022',
+    fixtureType: 'pendant'
+
   },
   {
     id: 'p3',
@@ -20,6 +28,9 @@ const projects = [
     desc: 'Collaboration with Cym Warkov - wiring custom made table lamps for fine dining.',
     image: '/src/assets/seven.jpg',
     location: 'New York City, NY',
+    projectType: 'Restaurant',
+    projectYear:'2020',
+    fixtureType: 'ceramic, wiring, table lamp'
   },
   {
     id: 'p4',
@@ -27,6 +38,9 @@ const projects = [
     desc: 'Light installation designed and installed.',
     image: '/src/assets/strang.jpg',
     location: 'Overland Park, KS',
+    projectType: 'Event Venue',
+    projectYear:'2021',
+    fixtureType: 'installation'
   },
   {
     id: 'p5',
@@ -34,6 +48,9 @@ const projects = [
     desc: 'Custom light installation and fixtures throughout sushi bar as Sunda Fulton Market.',
     image: '/src/assets/sunda.jpg',
     location: 'Chicago, IL',
+    projectType: 'Restaurant',
+    projectYear:'2024',
+    fixtureType: 'chandelier, lantern ,installation'
   },
   {
     id: 'p6',
@@ -41,6 +58,9 @@ const projects = [
     desc: 'Custom light fixtures for Megalopolis movie by Francis Ford Coppola.',
     image: '/src/assets/megalopolis.JPEG',
     location: 'Hollywood, CA',
+    projectType: 'Movie',
+    projectYear:'2024',
+    fixtureType: 'chandelier,pendant, sconce'
   },
 ]
 </script>
