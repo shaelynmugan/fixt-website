@@ -7,6 +7,7 @@ const form = reactive({
   projectType: "",
   details: "",
 });
+
 const submitted = ref(false);
 
 function submit() {
@@ -16,44 +17,146 @@ function submit() {
 </script>
 
 <template>
-  <section>
-    <h1>Request for Quote</h1>
-    <p>Placeholder text.</p>
+  <section class="rfq">
+    <header class="head">
+      <h1 class="title">Request for Quote</h1>
+      <p class="lede">Tell us a bit about your project.</p>
+    </header>
 
-    <form class="card" @submit.prevent="submit" style="max-width: 700px;">
-      <div style="display: grid; gap: 10px;grid-template-columns: repeat(2, 1fr);">
-       <div class="left">
-         <div class="inputTitle">
-          <div><strong>Name</strong></div>
-          <input class="inputField" v-model="form.name" type="text" required style="width: 100%; padding: 10px;" />
+    <form class="card" @submit.prevent="submit">
+      <div class="grid">
+        <div class="col">
+          <label class="field">
+            <span class="label"><strong>Name</strong></span>
+            <input v-model="form.name" class="input" type="text" required />
+          </label>
+
+          <label class="field">
+            <span class="label"><strong>Project Name</strong></span>
+            <input v-model="form.projectName" class="input" type="text" required />
+          </label>
+
+          <label class="field">
+            <span class="label"><strong>Type of Project</strong></span>
+            <select v-model="form.projectType" class="input" required>
+              <option value="" disabled>Select…</option>
+              <option>Residential</option>
+              <option>Commercial</option>
+              <option>Repair</option>
+              <option>Other</option>
+            </select>
+          </label>
         </div>
 
-        <div class="inputTitle">
-          <div><strong>Project Name</strong></div>
-          <input class="inputField" v-model="form.projectName" type="text" required style="width: 100%; padding: 10px;" />
+        <div class="col">
+          <label class="field">
+            <span class="label"><strong>Tell us about your project</strong></span>
+            <textarea v-model="form.details" class="input textarea" required />
+          </label>
         </div>
+      </div>
 
-        <div class="inputTitle">
-          <div><strong>Type of Project</strong></div>
-          <select class="inputSelect" v-model="form.projectType" required style="width: 100%; padding: 10px;">
-            <option value="" disabled>Select…</option>
-            <option>Residential</option>
-            <option>Commercial</option>
-            <option>Repair</option>
-            <option>Other</option>
-          </select>
-        </div>
-       </div>
-        <div class="right">
-        <div class="inputTitle">
-          <div><strong>Tell us about your project</strong></div>
-          <textarea v-model="form.details" required style="width: 100%; padding: 10px; min-height: 120px;"></textarea>
-        </div>
-        </div>
-        <button type="submit" style="padding: 10px 14px;">Submit</button>
-
-        <p v-if="submitted" style="margin: 0;">Submitted (placeholder) — check console.</p>
+      <div class="actions">
+        <button class="btn" type="submit">Submit</button>
+        <p v-if="submitted" class="submitted">Submitted (placeholder) — check console.</p>
       </div>
     </form>
   </section>
 </template>
+
+<style scoped>
+.rfq {
+  display: grid;
+  gap: 18px;
+}
+
+.lede {
+  margin: 0;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.card {
+  max-width: 100vw;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 16px;
+  background: #fff;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.label {
+  color: var(--text);
+}
+
+.input {
+  width: 100%;
+  padding: 12px 12px;
+  font: inherit;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--rule-strong);
+  box-shadow: 0 0 0 3px rgba(212, 0, 0, 0.12);
+}
+
+.textarea {
+  min-height: 170px;
+  resize: vertical;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 6px;
+  border-top: 1px solid var(--rule);
+  padding-top: 14px;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--text);
+  background: var(--text);
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 999px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.92;
+}
+
+.submitted {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+
+</style>

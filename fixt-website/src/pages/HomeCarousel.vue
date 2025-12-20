@@ -19,37 +19,63 @@ function next() {
 </script>
 
 <template>
-  <section class="card2">
+  <section class="carousel" aria-label="Featured images">
     <div class="frame">
-      <img class="project-image" :src="current.image" alt="" />
+      <img class="image" :src="current.image" alt="" />
     </div>
 
     <div class="controls">
-      <button type="button" @click="prev">←</button>
-      <span>{{ index + 1 }} / {{ slides.length }}</span>
-      <button type="button" @click="next">→</button>
+      <button class="btn" type="button" @click="prev" aria-label="Previous slide">←</button>
+      <span class="count">{{ index + 1 }} / {{ slides.length }}</span>
+      <button class="btn" type="button" @click="next" aria-label="Next slide">→</button>
     </div>
   </section>
 </template>
 
 <style scoped>
-.frame {
-  border: 1px solid #ddd;
-  border-radius: 14px;
+.carousel {
   display: grid;
-  place-items: center;
+  gap: 12px;
+}
+
+.frame {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
   overflow: hidden;
-  max-height: 80%;
-  aspect-ratio: auto;
+  background: #fff;
 }
+
+.image {
+  width: 100%;
+  height: clamp(260px, 42vw, 520px);
+  object-fit: cover;
+  display: block;
+}
+
 .controls {
-  margin-top: 10px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
 }
-button { padding: 8px 12px; }
+
+.count {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--rule-strong);
+  background: transparent;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: var(--text);
+}
 </style>
-
-
-

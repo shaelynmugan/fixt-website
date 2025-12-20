@@ -10,7 +10,7 @@ const projects = [
 
 <template>
   <section>
-    <h1>Our Work</h1>
+    <h1 class="title">Our Work</h1>
     <p>Placeholder intro.</p>
 
     <section class="projects">
@@ -34,8 +34,5 @@ const projects = [
   aspect-ratio: 3/2;
   overflow: hidden;
 }
-
-
-
 
 </style>
