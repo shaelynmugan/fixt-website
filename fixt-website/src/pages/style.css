@@ -1,5 +1,5 @@
 * { box-sizing: border-box; }
-body { margin: 0; font-family: system-ui, Arial, sans-serif; }
+body { margin: 0; font-family: system-ui, "Helvetica Neue", sans-serif; }
 a { color: inherit; text-decoration: none; }
 
 .app { min-height: 100vh; }
@@ -11,6 +11,17 @@ a { color: inherit; text-decoration: none; }
   top: 0;
   background: white;
   border-bottom: 1px solid #ddd;
+}
+
+.navbar{
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+
+.homeIcon{
+  width: 30px;
+  height: 30px;
+  padding: 5px;
 }
 .navbar__inner {
   max-width: 1100px;
@@ -24,16 +35,83 @@ a { color: inherit; text-decoration: none; }
 .navlinks { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
 .navlinks a { padding: 6px 10px; border: 1px solid transparent; border-radius: 10px; }
 .navlinks a.router-link-active { border-color: #999; }
+.inputTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.inputField{
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.inputSelect{
+  height: 35px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 12px; }
 
 
-.card { border: 1px solid #ddd; border-radius: 14px; padding: 12px; }
-.grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.card2 {
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 12px;
+  height: 100%;
+  justify-content: center;
+}
 
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.grid{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 50%;}
+
+.about-us-image {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 50%;
+  justify-content: center;
+
+}
+
+.organizer{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
 
 @media (min-width: 768px) {
   .page { padding: 24px; }
-  .grid { grid-template-columns: repeat(2, 1fr); }
+  .projects { grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width: 1024px) {
-  .grid { grid-template-columns: repeat(3, 1fr); }
+  .projects { grid-template-columns: repeat(3, 1fr); }
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 700px;
+
+}
+
+.page-content{
+  height: 90vh;
+}
+
+.home-page{
+  height: 100%;
 }

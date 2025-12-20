@@ -2,9 +2,9 @@
 import { computed, ref } from "vue";
 
 const slides = [
-  { id: 1, label: "Photo 1 (placeholder)" },
-  { id: 2, label: "Photo 2 (placeholder)" },
-  { id: 3, label: "Photo 3 (placeholder)" },
+  { id: 1, image: "/src/assets/seven.jpg" },
+  { id: 2, image: "/src/assets/strang.jpg" },
+  { id: 3, image: "/src/assets/sunda.jpg" },
 ];
 
 const index = ref(0);
@@ -19,9 +19,9 @@ function next() {
 </script>
 
 <template>
-  <section class="card">
+  <section class="card2">
     <div class="frame">
-      <p style="margin: 0;">{{ current.label }}</p>
+      <img class="project-image" :src="current.image" alt="" />
     </div>
 
     <div class="controls">
@@ -36,9 +36,11 @@ function next() {
 .frame {
   border: 1px solid #ddd;
   border-radius: 14px;
-  height: 280px; /* big frame */
   display: grid;
   place-items: center;
+  overflow: hidden;
+  max-height: 80%;
+  aspect-ratio: auto;
 }
 .controls {
   margin-top: 10px;
@@ -48,5 +50,6 @@ function next() {
 }
 button { padding: 8px 12px; }
 </style>
+
 
 

@@ -3,7 +3,7 @@ import HomeCarousel from '@/pages/HomeCarousel.vue'
 </script>
 
 <template>
-  <section>
+  <section class="home-page">
     <h1>Home</h1>
     <p>placeholderrrrr</p>
     <HomeCarousel />

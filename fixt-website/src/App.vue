@@ -1,11 +1,15 @@
 <script setup>
+import svg1 from '@/assets/logo.svg?component'
+
 </script>
 
 <template>
   <section class="container">
-    <nav>
+    <nav class="navbar">
       <div class="logo">
-        <router-link :to="{ name: 'home' }"><img src="./assets/my-logo.gif" alt="logo"></router-link>
+        <router-link :to="{ name: 'home' }">
+          <svg1 class="homeIcon"/>
+        </router-link>
       </div>
       <div class="links">
         <router-link :to="{ name: 'our-work' }">Our Work</router-link>
@@ -24,8 +28,9 @@
 
 <style scoped>
 section.container {
-  width: 90vw;
-  height: 90vh;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
   border: 1px solid black;
 
   nav {
@@ -37,9 +42,12 @@ section.container {
     }
 
     .links {
+      padding: 5px;
+      align-items: center;
       display: flex;
       gap: 1rem;
     }
+
   }
 }
 </style>
